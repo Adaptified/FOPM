@@ -51,10 +51,8 @@ public class TFM_ServerListener implements Listener
         // Colorful MOTD
 
         final StringBuilder motd = new StringBuilder();
-
-        for (String word : TFM_ConfigEntry.SERVER_MOTD.getString().replace("%mcversion%", TFM_ServerInterface.getVersion()).split(" "))
         {
-            motd.append(TFM_Util.randomChatColor()).append(word).append(" ");
+            motd.append(ChatColor.RED + "FOP " + ChatColor.DARK_RED + "- Free OP");
         }
 
         event.setMotd(TFM_Util.colorize(motd.toString()));

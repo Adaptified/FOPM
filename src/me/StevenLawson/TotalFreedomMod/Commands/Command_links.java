@@ -14,7 +14,7 @@ public class Command_links extends TFM_Command
     {
        sender.sendMessage(ChatColor.GREEN + "Website: http://altimaxfreedom.com");
        sender.sendMessage(ChatColor.GREEN + "Github: N/A");
-       sender.sendMessage(ChatColor.GREEN + "Forums: http://altimaxfreedom.com/forums");
+       sender.sendMessage(ChatColor.GREEN + "Forums: http://altimaxfreedom.boards.net");
         return true;
     }
 }
