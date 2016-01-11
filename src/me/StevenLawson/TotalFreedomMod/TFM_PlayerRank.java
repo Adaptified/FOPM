@@ -16,8 +16,8 @@ public enum TFM_PlayerRank
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.RED + "OP", ChatColor.RED + "[OP]"),
-    SUPER("a " + ChatColor.GOLD + "Super Admin", ChatColor.GOLD + "[SA]"),
-    TELNET("a " + ChatColor.DARK_GREEN + "Super Telnet Admin", ChatColor.DARK_GREEN + "[STA]"),
+    SUPER("an " + ChatColor.GOLD + "Super Admin", ChatColor.GOLD + "[SA]"),
+    ULTRA("an " + ChatColor.DARK_GREEN + "Ultra Admin", ChatColor.DARK_GREEN + "[UA]"),
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
     OWNER("the " + ChatColor.BLUE + "Owner", ChatColor.BLUE + "[Owner]"),
     CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]");
@@ -99,7 +99,7 @@ public enum TFM_PlayerRank
             }
             else if (entry.isTelnetAdmin())
             {
-                rank = TELNET;
+                rank = ULTRA;
             }
             else
             {

@@ -887,7 +887,7 @@ public class TFM_PlayerListener implements Listener
             else if (TFM_AdminList.isTelnetAdmin(player, true))
             {
                 name = ChatColor.DARK_GREEN + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&2Telnet Admin&8]");
+                TFM_PlayerData.getPlayerData(player).setTag("&8[&2Ultra Admin&8]");
             }
             else
             {
