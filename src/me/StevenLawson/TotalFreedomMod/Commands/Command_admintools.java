@@ -16,10 +16,14 @@ public class Command_admintools extends TFM_Command
     @Override
     public boolean run(CommandSender sender, Player player, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-    ItemStack LOGSTICK = new ItemStack(Material.STICK, 1);
+   ItemStack LOGSTICK = new ItemStack(Material.STICK, 1);
     ItemMeta stick = LOGSTICK.getItemMeta();
     stick.setDisplayName(ChatColor.BLUE + "The LogStick!");
-    return true;
+    
+    ItemStack WORLDEDITAXE = new ItemStack(Material.WOOD_AXE, 1);
+    ItemMeta wood_axe = WORLDEDITAXE.getItemMeta();
+    wood_axe.setDisplayName(ChatColor.BLUE + "WorldEdit Axe");
+        return true;
 }
 }
 //This will be updated if we need another admin tool added
