@@ -865,8 +865,8 @@ public class TFM_PlayerListener implements Listener
         }
         else if (TFM_Util.SYSS.contains(player.getName()))
         {
-            name = ChatColor.DARK_RED + name;
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys Admin&8]");
+            name = ChatColor.RED + name;
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&cSys Admin&8]");
         }
         else if (TFM_AdminList.isSuperAdmin(player))
         {
