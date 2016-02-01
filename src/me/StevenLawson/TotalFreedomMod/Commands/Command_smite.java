@@ -47,7 +47,7 @@ public class Command_smite extends TFM_Command
 
     public static void smite(final Player player, final String reason)
     {
-        TFM_Util.bcastMsg(String.format("%s has broken a rule! They have been punished! \n" + ChatColor.GOLD + "Reason: %s", player.getName(), reason), ChatColor.RED);
+        TFM_Util.bcastMsg(String.format("%s has broken too many rules! They have been punished!\n" + ChatColor.YELLOW + "Reason: %s", player.getName(), reason), ChatColor.RED);
 
         //Deop
         player.setOp(false);
@@ -76,7 +76,7 @@ public class Command_smite extends TFM_Command
 
     public static void smite(final Player player)
     {
-        TFM_Util.bcastMsg(player.getName() + " has broken a rule! They have been punished!", ChatColor.RED);
+        TFM_Util.bcastMsg(player.getName() + " has broken too many rules! They have been punished!", ChatColor.RED);
 
         //Deop
         player.setOp(false);

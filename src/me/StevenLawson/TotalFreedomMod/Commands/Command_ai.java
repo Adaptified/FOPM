@@ -15,7 +15,7 @@ public class Command_ai extends TFM_Command
     {
         player.sendMessage(ChatColor.GOLD + "So you want to apply for admin, eh?");
         player.sendMessage(ChatColor.RED + "Well let me tell you how to apply! First off:");
-        player.sendMessage(ChatColor.AQUA + "Go to http://altimaxfreedom.boards.net");
+        player.sendMessage(ChatColor.AQUA + "Go to http://fop.my-board.org");
         player.sendMessage(ChatColor.AQUA + "Secondly: Make sure you meet all the requirements before applying!");
         player.sendMessage(ChatColor.AQUA + "When you think you're ready, make sure to follow the template");
         player.sendMessage(ChatColor.RED + "Then apply!");

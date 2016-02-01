@@ -20,6 +20,7 @@ import me.StevenLawson.TotalFreedomMod.TFM_Player;
 import me.StevenLawson.TotalFreedomMod.TFM_PlayerData;
 import me.StevenLawson.TotalFreedomMod.TFM_PlayerList;
 import me.StevenLawson.TotalFreedomMod.TFM_PlayerRank;
+import static me.StevenLawson.TotalFreedomMod.TFM_PlayerRank.OP;
 import me.StevenLawson.TotalFreedomMod.TFM_RollbackManager;
 import me.StevenLawson.TotalFreedomMod.TFM_RollbackManager.RollbackEntry;
 import me.StevenLawson.TotalFreedomMod.TFM_ServerInterface;
@@ -862,11 +863,6 @@ public class TFM_PlayerListener implements Listener
             name = ChatColor.DARK_PURPLE + name;
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
         }
-        if (TFM_Util.SYSTEMS.contains(player.getName()))
-        {
-            name = ChatColor.DARK_RED + name;
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys Admin&8/&5Dev&8]");
-        }
         else if (TFM_Util.SYSS.contains(player.getName()))
         {
             name = ChatColor.DARK_RED + name;
@@ -892,7 +888,7 @@ public class TFM_PlayerListener implements Listener
             else
             {
                 name = ChatColor.AQUA + name;
-                TFM_PlayerData.getPlayerData(player).setTag("&8[&BSuper Admin&8]");
+                TFM_PlayerData.getPlayerData(player).setTag("&8[&bSuper Admin&8]");
             }
         }
 
