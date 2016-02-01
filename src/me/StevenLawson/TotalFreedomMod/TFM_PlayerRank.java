@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 public enum TFM_PlayerRank
 {
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
-    SYS("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys Admin]"),
+    SYS("a " + ChatColor.RED + "System Admin", ChatColor.RED + "[Sys Admin]"),
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.AQUA + "OP", ChatColor.AQUA + "[OP]"),
