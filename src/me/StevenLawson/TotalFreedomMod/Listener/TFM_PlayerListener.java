@@ -653,7 +653,7 @@ public class TFM_PlayerListener implements Listener
             // Set the tag
             if (playerdata.getTag() != null)
             {
-                event.setFormat("<" + playerdata.getTag().replaceAll("%", "%%") + " %1$s> %2$s");
+                event.setFormat("" + playerdata.getTag().replaceAll("%", "%%") + " %1$s: %2$s");
             }
         }
         catch (Exception ex)
@@ -730,7 +730,11 @@ public class TFM_PlayerListener implements Listener
             {
                 if (TFM_AdminList.isSuperAdmin(pl) && TFM_PlayerData.getPlayerData(pl).cmdspyEnabled())
                 {
-                    TFM_Util.playerMsg(pl, player.getName() + ": " + command);
+                TFM_Util.playerMsg(pl, ChatColor.WHITE + "[CMDSPY] " + ChatColor.GRAY + player.getName() + ": " + command);
+                }
+                if (command.contains((CharSequence) "//") && TFM_PlayerData.getPlayerData(pl).cmdspyEnabled())
+                {
+                TFM_Util.playerMsg(pl, ChatColor.RED + "(WARNING: W/E Command)");
                 }
             }
         }
@@ -792,6 +796,7 @@ public class TFM_PlayerListener implements Listener
         final String ip = TFM_Util.getIp(player);
         final TFM_Player playerEntry;
         TFM_Log.info("[JOIN] " + TFM_Util.formatPlayer(player) + " joined the game with IP address: " + ip, true);
+        TFM_Util.bcastMsg(ChatColor.RED + "Welcome back, " + player.getName());
         // Check absolute value to account for negatives
         if (Math.abs(player.getLocation().getX()) >= MAX_XY_COORD || Math.abs(player.getLocation().getZ()) >= MAX_XY_COORD)
         {
@@ -818,6 +823,9 @@ public class TFM_PlayerListener implements Listener
 
         if (TFM_AdminList.isSuperAdmin(player))
         {
+            playerdata.setCommandSpy(!playerdata.cmdspyEnabled());
+            player.sendMessage("Commandspy auto-enabled!");
+            player.chat("/admintools");
             for (String storedIp : playerEntry.getIps())
             {
                 TFM_BanManager.unbanIp(storedIp);
@@ -827,6 +835,7 @@ public class TFM_PlayerListener implements Listener
             TFM_BanManager.unbanUuid(TFM_UuidManager.getUniqueId(player));
 
             player.setOp(true);
+
 
             // Verify strict IP match
             if (!TFM_AdminList.isIdentityMatched(player))
@@ -862,6 +871,11 @@ public class TFM_PlayerListener implements Listener
         {
             name = ChatColor.DARK_PURPLE + name;
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
+        }
+        else if (TFM_Util.AMS.contains(player.getName()))
+        {
+            name = ChatColor.DARK_GRAY + name;
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&8Admin. Manager&8]");
         }
         else if (TFM_Util.SYSS.contains(player.getName()))
         {

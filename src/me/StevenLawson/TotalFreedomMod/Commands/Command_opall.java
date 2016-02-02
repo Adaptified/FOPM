@@ -1,6 +1,7 @@
 package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -22,11 +23,13 @@ public class Command_opall extends TFM_Command
             if (args[0].equals("-c"))
             {
                 doSetGamemode = true;
+                TFM_Util.bcastMsg(ChatColor.AQUA + "Setting gamemodes to creative.");
                 targetGamemode = GameMode.CREATIVE;
             }
             else if (args[0].equals("-s"))
             {
                 doSetGamemode = true;
+                TFM_Util.bcastMsg(ChatColor.AQUA + "Setting gamemodes to survival.");
                 targetGamemode = GameMode.SURVIVAL;
             }
         }

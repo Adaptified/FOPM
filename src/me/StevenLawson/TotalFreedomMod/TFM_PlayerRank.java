@@ -3,6 +3,7 @@ package me.StevenLawson.TotalFreedomMod;
 import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.DEVELOPERS;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.SYSS;
+import static me.StevenLawson.TotalFreedomMod.TFM_Util.AMS;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -11,6 +12,7 @@ public enum TFM_PlayerRank
 {
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
     SYS("a " + ChatColor.RED + "System Admin", ChatColor.RED + "[Sys Admin]"),
+    AM("the " + ChatColor.DARK_GRAY + "Admin Manager", ChatColor.DARK_GRAY + "[Admin MGR]"),
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.AQUA + "OP", ChatColor.AQUA + "[OP]"),
@@ -71,6 +73,10 @@ public enum TFM_PlayerRank
         {
             return DEVELOPER;
         }
+        if (AMS.contains(sender.getName()))
+        {
+            return AM;
+        }       
         if (SYSS.contains(sender.getName()))
         {
             return SYS;

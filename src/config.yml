@@ -10,6 +10,9 @@ server:
 
   # The address your server is located at. Please do not include the port.
   address: fop.us.to
+  
+  # The server's website/forums
+  forums: http://freedomop.my-board.org
 
   # Shown at the server list
   motd: FOP &8- Minecraft %mcversion%
