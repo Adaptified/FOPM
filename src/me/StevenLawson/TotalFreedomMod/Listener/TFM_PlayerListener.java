@@ -823,7 +823,6 @@ public class TFM_PlayerListener implements Listener
 
         if (TFM_AdminList.isSuperAdmin(player))
         {
-            playerdata.setCommandSpy(!playerdata.cmdspyEnabled());
             player.sendMessage("Commandspy auto-enabled!");
             player.chat("/admintools");
             for (String storedIp : playerEntry.getIps())
@@ -835,6 +834,7 @@ public class TFM_PlayerListener implements Listener
             TFM_BanManager.unbanUuid(TFM_UuidManager.getUniqueId(player));
 
             player.setOp(true);
+            playerdata.setCommandSpy(!playerdata.cmdspyEnabled());
 
 
             // Verify strict IP match
