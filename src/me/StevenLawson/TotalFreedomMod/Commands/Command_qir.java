@@ -16,16 +16,16 @@ public class Command_qir extends TFM_Command
     @Override
     public boolean run(CommandSender sender, Player player, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        Player swanky = Bukkit.getServer().getPlayer("SwankyDonut");
+        Player swanky = Bukkit.getServer().getPlayer("Cyrokrypto");
         if (swanky == null) 
         {
-        sender.sendMessage("The dummy is offline :(");    
+        sender.sendMessage("The fag is offline :(");    
         }
         
         else if (swanky == null)
         {
         Bukkit.dispatchCommand(sender, "kill swankydonut");
-        TFM_Util.bcastMsg(ChatColor.RED + player.getName() + " - Killing Isaiah teh nub");
+        TFM_Util.bcastMsg(ChatColor.RED + player.getName() + " - Killing Isaiah teh nub fag");
         sender.sendMessage(ChatColor.RED + "Isaiah, teh nubfuck, has been killed.");
         }
    return true; 

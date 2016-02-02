@@ -19,20 +19,11 @@ public class Command_o extends TFM_Command
     {
         if (args.length == 0)
         {
-            if (senderIsConsole)
-            {
-                playerMsg("Only in-game players can toggle AdminChat.");
-                return true;
-            }
-
-            TFM_PlayerData userinfo = TFM_PlayerData.getPlayerData(sender_p);
-            userinfo.setAdminChat(!userinfo.inAdminChat());
-            playerMsg("Toggled Admin Chat " + (userinfo.inAdminChat() ? "on" : "off") + ".");
+        sender.sendMessage("Toggling admin chat is disabled, please type a message.");
+        return true;
         }
-        else
-        {
             TFM_Util.adminChatMessage(sender, StringUtils.join(args, " "), senderIsConsole);
-        }
+     
 
         return true;
     }

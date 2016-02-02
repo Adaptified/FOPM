@@ -105,6 +105,15 @@ public class TFM_PlayerListener implements Listener
                         event.setCancelled(true);
                         break;
                     }
+                    
+                    case BOOK:
+                    {
+
+                        player.getInventory().setItem(player.getInventory().getHeldItemSlot(), new ItemStack(Material.COOKIE, 1));
+                        player.sendMessage(ChatColor.GRAY + "Books are disabled due to recent exploits.");
+                        event.setCancelled(true);
+                        break;
+                    }
 
                     case EXPLOSIVE_MINECART:
                     {
